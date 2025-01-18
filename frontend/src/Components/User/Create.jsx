@@ -13,7 +13,9 @@ function Create() {
     const handlesubmit= (event)=>{
         event.preventDefault();
         axios
-        .post(`${URL_USERS}`, values)
+        .post(`${URL_USERS}`, values, {referrerPolicy: "unsafe-url",
+            "Content-Type": "application/json",           
+           })
         .then((response) => {
           console.log(response.data);
           navigate('/users')

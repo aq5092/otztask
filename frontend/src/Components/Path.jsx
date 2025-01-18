@@ -1,1 +1,1 @@
-export const URL_USERS = "http://127.0.0.1:8000/users/";
+export const URL_USERS = "http://185.247.17.250:8000/users/";

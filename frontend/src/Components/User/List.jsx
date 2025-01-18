@@ -10,7 +10,12 @@ function ListUsers() {
   useEffect(() => {
     axios
       // .get("http://127.0.0.1:8000/users/")
-      .get(`${URL_USERS}`)
+      .get(`${URL_USERS}`,
+        {
+          "Content-Type": "application/json",
+          
+        }
+      )
       .then((response) => {
         setUsers(response.data);
         console.log(response.data);
